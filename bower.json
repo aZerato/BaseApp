@@ -1,0 +1,26 @@
+{
+  "name": "muscl",
+  "version": "0.0.1",
+  "description": "muscl a little application to be in good health",
+  "main": "Gruntfile.js",
+  "authors": [
+    "aZerato"
+  ],
+  "license": "BSD",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "toastr": "~2.0.1",
+    "backbone": "~1.1.2",
+    "backbone.marionette": "~1.6.4",
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1",
+    "requirejs": "~2.1.11"
+  }
+}

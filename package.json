@@ -1,0 +1,19 @@
+{
+  "name": "muscl",
+  "version": "0.0.1",
+  "description": "muscl a little application to be in good health",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "~0.7.1",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aZerato",
+  "license": "BSD-2-Clause"
+}
