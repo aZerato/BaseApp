@@ -8,7 +8,9 @@ define([
 		*/
 		var Application = new Backbone.Marionette.Application();
 
-
+		Application.addInitializer(function(options) {
+			
+		});
 
 		return Application;
 });
