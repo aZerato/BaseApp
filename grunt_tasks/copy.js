@@ -10,6 +10,8 @@ module.exports = {
             {src: '<%= configs.bower %>/backbone/backbone.js', dest: '<%= configs.vendors %>/backbone.js'},
             {src: '<%= configs.bower %>/backbone.marionette/lib/backbone.marionette.min.js', dest: '<%= configs.vendors %>/backbone.marionette.js'},
 
+            {src: '<%= configs.bower %>/handlebars/handlebars.min.js', dest: '<%= configs.vendors %>/handlebars.js'},
+
             {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.min.js', dest: '<%= configs.vendors %>/bootstrap.js'},
 
             // bower assets
@@ -33,6 +35,8 @@ module.exports = {
             {src: '<%= configs.bower %>/underscore/underscore.js', dest: '<%= configs.vendors %>/underscore.js'},
             {src: '<%= configs.bower %>/backbone/backbone.js', dest: '<%= configs.vendors %>/backbone.js'},
             {src: '<%= configs.bower %>/backbone.marionette/lib/backbone.marionette.js', dest: '<%= configs.vendors %>/backbone.marionette.js'},
+
+            {src: '<%= configs.bower %>/handlebars/handlebars.js', dest: '<%= configs.vendors %>/handlebars.js'},
 
             {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.js', dest: '<%= configs.vendors %>/bootstrap.js'},
 

@@ -6,7 +6,8 @@ require.config({
 		'bootstrap' : 'vendors/bootstrap',
 		'underscore': 'vendors/underscore',
 		'backbone': 'vendors/backbone',
-		'marionette': 'vendors/backbone.marionette'
+		'marionette': 'vendors/backbone.marionette',
+		'handlebars' : 'vendors/handlebars'
 	},
 	shim: {
 		'toastr': {
@@ -33,9 +34,10 @@ require([
 	'jquery',
 	'backbone',
 	'marionette',
+	'handlebars',
 	'bootstrap',
 	'application'
-	], function($, Backbone, Marionette, bootstrap, Application) {
+	], function($, Backbone, Marionette, handlebars, Bootstrap, Application) {
 		$(document).ready(function() {
 			Application.start();
 		});
