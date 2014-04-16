@@ -1,13 +1,14 @@
 require.config({
 	baseUrl: './scripts/',
-		paths: {
+	paths: {
 		'jquery': 'vendors/jquery',
 		'toastr': 'vendors/toastr',
 		'bootstrap' : 'vendors/bootstrap',
 		'underscore': 'vendors/underscore',
 		'backbone': 'vendors/backbone',
 		'marionette': 'vendors/backbone.marionette',
-		'handlebars' : 'vendors/handlebars'
+		'handlebars' : 'vendors/handlebars',
+		'hbs' : 'vendors/hbs'
 	},
 	shim: {
 		'toastr': {
@@ -26,6 +27,9 @@ require.config({
 		'marionette': {
 			deps: ['jquery', 'underscore', 'backbone'],
 			exports: 'Marionette'
+		},
+		'handlebars': {
+			exports: 'Handlebars'
 		}
 	}
 });
@@ -37,7 +41,7 @@ require([
 	'handlebars',
 	'bootstrap',
 	'application'
-	], function($, Backbone, Marionette, handlebars, Bootstrap, Application) {
+	], function($, Backbone, Marionette, Handlebars, Bootstrap, Application) {
 		$(document).ready(function() {
 			Application.start();
 		});

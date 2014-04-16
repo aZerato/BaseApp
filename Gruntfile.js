@@ -1,12 +1,13 @@
 module.exports = function(grunt) {
 
     /**
-* tasks configurations.
-*/
+    * tasks configurations.
+    */
     var config = require('./grunt_tasks/config');
     var connect = require('./grunt_tasks/connect');
     var clean = require('./grunt_tasks/clean');
     var copy = require('./grunt_tasks/copy');
+    var watch = require('./grunt_tasks/watch');
 
     // Project configuration.
     grunt.initConfig({
@@ -15,27 +16,29 @@ module.exports = function(grunt) {
       configs: config,
       connect: connect,
       clean: clean,
-      copy: copy
+      copy: copy,
+      watch: watch
     });
 
-      /**
-* load tasks.
-*/
+    /**
+    * load tasks.
+    */
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     /*
-* register tasks
-*/
+    * register tasks
+    */
     grunt.registerTask('prod', [
-        'clean',
-        'copy:prod'
+      'clean',
+      'copy:prod'
     ]);
 
     grunt.registerTask('debug', [
-        'clean',
-        'copy:debug'
+      'clean',
+      'copy:debug'
     ]);
 
     grunt.registerTask('run', [

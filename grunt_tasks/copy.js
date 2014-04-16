@@ -11,6 +11,11 @@ module.exports = {
             {src: '<%= configs.bower %>/backbone.marionette/lib/backbone.marionette.min.js', dest: '<%= configs.vendors %>/backbone.marionette.js'},
 
             {src: '<%= configs.bower %>/handlebars/handlebars.min.js', dest: '<%= configs.vendors %>/handlebars.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs.js', dest: '<%= configs.vendors %>/hbs.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/handlebars.js', dest: '<%= configs.vendors %>/hbs/handlebars.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/i18nprecompile.js', dest: '<%= configs.vendors %>/hbs/i18nprecompile.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/json2.js', dest: '<%= configs.vendors %>/hbs/json2.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/underscore.js', dest: '<%= configs.vendors %>/hbs/underscore.js'},
 
             {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.min.js', dest: '<%= configs.vendors %>/bootstrap.js'},
 
@@ -20,9 +25,7 @@ module.exports = {
         
             // application
             {src: '<%= configs.src %>/assets/index.html', dest: '<%= configs.web %>/index.html'},
-            {src: '<%= configs.src %>/scripts/require-config.js', dest: '<%= configs.scripts %>/require-config.js'},
-            {src: '<%= configs.src %>/scripts/application.js', dest: '<%= configs.scripts %>/application.js'},
-            {src: '<%= configs.src %>/scripts/models/Todo.js', dest: '<%= configs.scripts %>/models/Todo.js'}
+            {expand: true, cwd: '<%= configs.src %>/scripts/', src: '*', dest: '<%= configs.scripts %>'}
         ]
     },
     debug: {
@@ -37,6 +40,11 @@ module.exports = {
             {src: '<%= configs.bower %>/backbone.marionette/lib/backbone.marionette.js', dest: '<%= configs.vendors %>/backbone.marionette.js'},
 
             {src: '<%= configs.bower %>/handlebars/handlebars.js', dest: '<%= configs.vendors %>/handlebars.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs.js', dest: '<%= configs.vendors %>/hbs.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/handlebars.js', dest: '<%= configs.vendors %>/hbs/handlebars.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/i18nprecompile.js', dest: '<%= configs.vendors %>/hbs/i18nprecompile.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/json2.js', dest: '<%= configs.vendors %>/hbs/json2.js'},
+            {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/underscore.js', dest: '<%= configs.vendors %>/hbs/underscore.js'},
 
             {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.js', dest: '<%= configs.vendors %>/bootstrap.js'},
 
@@ -46,9 +54,7 @@ module.exports = {
 
             // application
             {src: '<%= configs.src %>/assets/index.html', dest: '<%= configs.web %>/index.html'},
-            {src: '<%= configs.src %>/scripts/require-config.js', dest: '<%= configs.scripts %>/require-config.js'},
-            {src: '<%= configs.src %>/scripts/application.js', dest: '<%= configs.scripts %>/application.js'},
-            {src: '<%= configs.src %>/scripts/models/Todo.js', dest: '<%= configs.scripts %>/models/Todo.js'}
+            {expand: true, cwd: '<%= configs.src %>/scripts/', src: '**', dest: '<%= configs.scripts %>'}
         ]
     }
 };
