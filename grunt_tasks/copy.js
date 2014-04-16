@@ -25,6 +25,7 @@ module.exports = {
         
             // application
             {src: '<%= configs.src %>/assets/index.html', dest: '<%= configs.web %>/index.html'},
+            {src: '<%= configs.src %>/assets/justified-nav.css', dest: '<%= configs.web %>/styles/justified-nav.css'},
             {expand: true, cwd: '<%= configs.src %>/scripts/', src: '*', dest: '<%= configs.scripts %>'}
         ]
     },
@@ -54,6 +55,7 @@ module.exports = {
 
             // application
             {src: '<%= configs.src %>/assets/index.html', dest: '<%= configs.web %>/index.html'},
+            {src: '<%= configs.src %>/assets/justified-nav.css', dest: '<%= configs.web %>/styles/justified-nav.css'},
             {expand: true, cwd: '<%= configs.src %>/scripts/', src: '**', dest: '<%= configs.scripts %>'}
         ]
     }
