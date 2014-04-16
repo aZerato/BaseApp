@@ -1,6 +1,9 @@
 module.exports = {
 	debug: {
 		files: '<%= configs.src %>/**',
-		tasks: ['debug', 'run']
+		tasks: ['debug'],
+		options: {
+			livereload: true
+		}
 	}
 };

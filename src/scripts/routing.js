@@ -4,9 +4,9 @@ define([
 	], function(Backbone, Marionette) {
 		
 		var Routing = Backbone.Marionette.AppRouter.extend({
-			AppRoutes: {
+			appRoutes: {
 				"" : "home",
-				"contact" : "contact"
+				"contact": "contact"
 			}
 		});
 

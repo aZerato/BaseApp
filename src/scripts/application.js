@@ -3,26 +3,23 @@ define([
 	'marionette',
 	'routing',
 	'handlebars',
-	'hbs!templates/shared/mainmenu',
-	'controllers/HomeController'
-	], function (Backbone, Marionette, Routing, Handlebars, mainmenuTpl, HomeController) {
+	'controllers/HomeController',
+	'views/shared/mainmenu'
+	], function (Backbone, Marionette, Routing, Handlebars, HomeController, MainMenuView) {
 
 		/*
 		* Application
 		*/
-		var Application = new Backbone.Marionette.Application();
+		var Application = new Marionette.Application();
 
-		var Layout = new Backbone.Marionette.Layout.extend({
-			region: {
-				mainmenu: {
-					template: mainmenuTpl
-				}
-			}
+		Application.addRegions({
+			navigation: '#navigation',
+			mainRegion: '#mainRegion'
 		});
 
 		Application.addInitializer(function(options) {
 			var routing = new Routing({
-				HomeController: new HomeController(Application)
+				controller: new HomeController({App: Application})
 			});
 
 			Backbone.history.start({
@@ -32,6 +29,11 @@ define([
 			});
 			Backbone.history.loadUrl();
 		});
+
+		/*
+		 * Navigation Menu
+		 */
+		Application.navigation.show(new MainMenuView());
 
 		return Application;
 });

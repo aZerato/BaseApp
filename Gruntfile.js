@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     var clean = require('./grunt_tasks/clean');
     var copy = require('./grunt_tasks/copy');
     var watch = require('./grunt_tasks/watch');
+    var concurrent = require('./grunt_tasks/concurrent');
 
     // Project configuration.
     grunt.initConfig({
@@ -17,7 +18,8 @@ module.exports = function(grunt) {
       connect: connect,
       clean: clean,
       copy: copy,
-      watch: watch
+      watch: watch,
+      concurrent: concurrent
     });
 
     /**
@@ -27,6 +29,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-concurrent');
 
     /*
     * register tasks
@@ -41,8 +44,16 @@ module.exports = function(grunt) {
       'copy:debug'
     ]);
 
+    // Run a local server instance
     grunt.registerTask('run', [
-      'connect'
+      'connect:server'
     ]);
 
+    // Launch parrallels tasks
+    // - a watcher on "src/*" files launched "debug" task
+    // - with a second task launch "run" task
+    // you only have to refresh Browser tab
+    grunt.registerTask('dev', [
+      'concurrent:debugwatcher'
+    ]);
 };
