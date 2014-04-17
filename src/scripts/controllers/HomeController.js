@@ -3,8 +3,8 @@ define([
 	'marionette',
 	'views/home/home',
 	'views/home/contact',
-	'views/shared/mainmenu'
-	], function (Backbone, Marionette, HomeView, ContactView, MainMenuView) {
+	'middleware/menuMw'
+	], function (Backbone, Marionette, HomeView, ContactView, MenuMw) {
 
 		var HomeController = Backbone.Marionette.Controller.extend({
 			initialize: function(options) {
@@ -12,15 +12,13 @@ define([
 			},
 
 			home: function() {
+				MenuMw(this.App);
 				this.App.mainRegion.show(new HomeView());
 			},
 
 			contact: function() {
+				MenuMw(this.App);
 				this.App.mainRegion.show(new ContactView());
-			},
-
-			mainmenu: function() {
-				this.App.navigation.show(new MainMenuView());
 			}
 		});
 
