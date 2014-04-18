@@ -3,11 +3,9 @@ define([
 	'marionette',
 	'routing',
 	'handlebars',
-	'controllers/HomeController',
-	'views/shared/mainmenu',
-		'models/shared/ItemMenu',
-	'collections/shared/collectionitemmenu',
-	], function (Backbone, Marionette, Routing, Handlebars, HomeController, MainMenuView, ItemMenu, CollectionItemsMenu) {
+	'helpers/shared/menuhelper',
+	'controllers/HomeController'
+	], function (Backbone, Marionette, Routing, Handlebars, MenuHelper, HomeController) {
 
 		/*
 		* Application
@@ -20,10 +18,21 @@ define([
 		});
 
 		Application.addInitializer(function(options) {
+			/*
+			 *	Generate Menu
+			 */
+			new MenuHelper(Application);
+			
+			/*
+			 *	Routing
+			 */
 			var routing = new Routing({
 				controller: new HomeController({App: Application})
 			});
 
+			/*
+			 *	Backbone App basic configuration
+			 */
 			Backbone.history.start({
 				pushState: false,
 				root: '/',
@@ -31,21 +40,6 @@ define([
 			});
 			Backbone.history.loadUrl();
 		});
-
-		/*
-		 * Navigation Menu
-		 */
-		var item1 = new ItemMenu({active: "", path: "", name: "Home"});
-		var item2 = new ItemMenu({active: "", path: "contact", name: "Contact"});
-
-		var Collection = new CollectionItemsMenu([
-			item1,
-			item2
-		]);
-
-		Application.navigation.show(new MainMenuView({
-			collection: Collection
-		}));
 
 		return Application;
 });
