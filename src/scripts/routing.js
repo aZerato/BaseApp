@@ -6,6 +6,7 @@ define([
 		var Routing = Backbone.Marionette.AppRouter.extend({
 			appRoutes: {
 				"" : "home",
+				"about": "about",
 				"contact": "contact"
 			}
 		});
