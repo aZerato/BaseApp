@@ -4,5 +4,6 @@ module.exports = {
     web : './web',
     scripts : './web/scripts',
     vendors: './web/scripts/vendors',
-    styles: './web/styles'
+    styles: './web/styles',
+    fonts: './web/fonts'
 };

@@ -6,7 +6,8 @@ define([
 			defaults: {
 				active: "",
 				path: "",
-				name: ""
+				name: "",
+				securized: false
 			}
 		});
 

@@ -17,12 +17,15 @@ module.exports = {
             {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/json2.js', dest: '<%= configs.vendors %>/hbs/json2.js'},
             {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/underscore.js', dest: '<%= configs.vendors %>/hbs/underscore.js'},
 
-            {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.min.js', dest: '<%= configs.vendors %>/bootstrap.js'},
-
             // bower assets
             {src: '<%= configs.bower %>/toastr/toastr.min.css', dest: '<%= configs.styles %>/toastr.min.css'},
+            
+
+            {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.min.js', dest: '<%= configs.vendors %>/bootstrap.js'},
             {src: '<%= configs.bower %>/bootstrap/dist/css/bootstrap.min.css', dest: '<%= configs.styles %>/bootstrap.css'},
-        
+            {expand: true, cwd: '<%= configs.bower %>/bootstrap/dist/fonts/', src: '*', dest: '<%= configs.fonts %>'},
+            
+
             // application
             {src: '<%= configs.src %>/assets/index.html', dest: '<%= configs.web %>/index.html'},
             {src: '<%= configs.src %>/assets/justified-nav.css', dest: '<%= configs.web %>/styles/justified-nav.css'},
@@ -46,12 +49,14 @@ module.exports = {
             {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/i18nprecompile.js', dest: '<%= configs.vendors %>/hbs/i18nprecompile.js'},
             {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/json2.js', dest: '<%= configs.vendors %>/hbs/json2.js'},
             {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/underscore.js', dest: '<%= configs.vendors %>/hbs/underscore.js'},
-
-            {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.js', dest: '<%= configs.vendors %>/bootstrap.js'},
-
+            
             // bower assets
             {src: '<%= configs.bower %>/toastr/toastr.css', dest: '<%= configs.styles %>/toastr.css'},
+            
+            {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.js', dest: '<%= configs.vendors %>/bootstrap.js'},
             {src: '<%= configs.bower %>/bootstrap/dist/css/bootstrap.css', dest: '<%= configs.styles %>/bootstrap.css'},
+            {expand: true, cwd: '<%= configs.bower %>/bootstrap/dist/fonts/', src: '*', dest: '<%= configs.fonts %>'},
+
 
             // application
             {src: '<%= configs.src %>/assets/index.html', dest: '<%= configs.web %>/index.html'},
