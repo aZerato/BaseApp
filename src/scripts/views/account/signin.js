@@ -6,7 +6,13 @@ define([
 
 		var SigninView = Backbone.Marionette.ItemView.extend({
 			template: signinTemplate,
-			className: 'modal fade'
+			className: 'modal fade',
+			events: {
+				'submit form': 'signin'
+			},
+			signin: function() {
+				alert('');
+			}
 		});
 
 		return SigninView;
