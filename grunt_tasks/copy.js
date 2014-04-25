@@ -18,7 +18,7 @@ module.exports = {
             {src: '<%= configs.bower %>/require-handlebars-plugin/hbs/underscore.js', dest: '<%= configs.vendors %>/hbs/underscore.js'},
 
             // bower assets
-            {src: '<%= configs.bower %>/toastr/toastr.min.css', dest: '<%= configs.styles %>/toastr.min.css'},
+            {src: '<%= configs.bower %>/toastr/toastr.min.css', dest: '<%= configs.styles %>/toastr.css'},
             
 
             {src: '<%= configs.bower %>/bootstrap/dist/js/bootstrap.min.js', dest: '<%= configs.vendors %>/bootstrap.js'},

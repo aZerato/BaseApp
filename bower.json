@@ -1,7 +1,7 @@
 {
-  "name": "muscl",
+  "name": "Sample App",
   "version": "0.0.1",
-  "description": "muscl a little application to be in good health",
+  "description": "Sample App",
   "main": "Gruntfile.js",
   "authors": [
     "aZerato"
