@@ -31,6 +31,7 @@ How To
 
 Type :
 
+```
 npm install
 bower install
 grunt dev (or grunt debug and grunt run)
