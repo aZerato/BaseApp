@@ -1,7 +1,7 @@
 {
-  "name": "Sample App",
+  "name": "BaseApp",
   "version": "0.0.1",
-  "description": "Sample App",
+  "description": "BaseApp",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "~0.4.4",
